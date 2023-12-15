@@ -1,0 +1,76 @@
+// ECHAVEZ ANDREA A. 
+// BSCPE 2-1 
+// CONDITIONAL FLOW CONTROL ACT 2 - HOUSE AND GARAGE PURCHASE
+
+import java.util.Scanner;
+public class Activity2_PurchasingHouse 
+{
+    public static void main(String[] args)
+    {
+        System.out.println("------------------------------------------------------");
+        System.out.println("        BUY AND BUILD YOUR OWN HOUSE AND GARAGE       ");
+        System.out.println("------------------------------------------------------");
+
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\nEnter the type of house you want to purchase:");
+        System.out.println("1 - Single Family");
+        System.out.println("2 - Townhouse");
+        System.out.println("3 - Condominium");
+        System.out.print("\n******************************************************");
+        System.out.print("\nEnter your choice: ");
+        int housechoice = scanner.nextInt();
+
+        String TypeofHouse;
+        if (housechoice == 1) {
+            TypeofHouse = "Single Family";
+        }
+        else if (housechoice == 2) {
+            TypeofHouse = "Townhouse";
+        } 
+        else if (housechoice == 3) {
+            TypeofHouse = "Condominium";
+        } 
+        else {
+            TypeofHouse = "Unknown";
+            System.out.println("NOTE: Your choice is invalid. Please try again!");
+        }
+        
+        
+        System.out.print("\n______________________________________________________");
+        
+        
+        System.out.println("\nEnter the type of garage you want:");
+        System.out.println("A - Doesn't matter");
+        System.out.println("B - Interior");
+        System.out.println("C - Exterior");
+        System.out.print("\n******************************************************");
+        System.out.print("\nEnter your choice: ");
+        char garagechoice = scanner.next().toUpperCase().charAt(0);
+
+        String TypeofGarage;
+        if (garagechoice == 'A') {
+            TypeofGarage = "Doesn't matter";
+        } 
+        else if (garagechoice == 'B') {
+            TypeofGarage = "Interior";
+        } 
+        else if (garagechoice == 'C') {
+            TypeofGarage = "Exterior";
+        } 
+        else {
+           TypeofGarage = "Unknown";
+            System.out.println("NOTE: Your choice is invalid. Please try again!");
+        }
+
+        
+        System.out.print("\n______________________________________________________");
+        System.out.print("\nCongratulations! Here is your chosen House and Garage.");
+        System.out.print("\n******************************************************");
+        System.out.println("\nYOUR CHOSEN HOUSE TYPE: " + TypeofHouse);
+        System.out.println("YOUR CHOSEN GARAGE TYPE: " + TypeofGarage);
+    
+    }
+    
+}
