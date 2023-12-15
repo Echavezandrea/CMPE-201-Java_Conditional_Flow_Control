@@ -1,0 +1,38 @@
+// ECHAVEZ ANDREA A. 
+// BSCPE 2-1 
+// CONDITIONAL FLOW CONTROL ACT 1A - VOWEL LETTERS
+
+import java.util.Scanner;
+public class Activity1A_AEIOU 
+{
+   public static void main(String[] args)
+   {
+       System.out.println("*********************************");
+       System.out.println("    WELCOME TO VOWEL CHECKER     ");
+       System.out.println("*********************************");
+       
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Kindly enter a Vowel Letter: ");
+        
+        char input = scanner.next().charAt(0);
+            System.out.println("\nResult:");
+        if (isVowel(input)) {
+            System.out.println("The Letter \"" + input + "\" is considered a VOWEL.");
+        } 
+        else {
+            System.out.println("The Letter \"" + input + "\" is considered a Consonant NOT  VOWEL.");
+        }
+    }
+
+ 
+    public static boolean isVowel(char ch) 
+    {
+        ch = Character.toUpperCase(ch);
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            return true;
+        } 
+        else {
+            return false;
+        }
+    }  
+}
